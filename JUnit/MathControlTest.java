@@ -56,17 +56,42 @@ public class MathControlTest {
      */
     @Test
     public void testCalcDistanceTwoPoints() throws Exception {
-        System.out.println("calcDistanceTwoPoints");
-        double x1 = 0.0;
-        double x2 = 0.0;
-        double y1 = 0.0;
-        double y2 = 0.0;
+        System.out.println("calcDistanceTwoPoints Unit 1 Test");
+        double x1 = 10.0;
+        double x2 = 20.0;
+        double y1 = 5.0;
+        double y2 = 15.0;
         MathControl instance = new MathControl();
-        double expResult = 0.0;
+        double expResult = 14.14213562;
         double result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
+        assertEquals(expResult, result, 0.00000001);
+        
+        System.out.println("calcDistanceTwoPoints Unit 2 Test");
+        x1 = 10.0;
+        x2 = 10.0;
+        y1 = 10.0;
+        y2 = 10.0;
+        expResult = -1;
+        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+            
+        System.out.println("calcDistanceTwoPoints Unit 3 Test");
+        x1 = 0.0;
+        x2 = -1.0;
+        y1 = 1.0;
+        y2 = -1.0;
+        expResult = 2.23606797749979;
+        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
+        assertEquals(expResult, result, 0.00000000000001);
+        
+        System.out.println("calcDistanceTwoPoints Unit 4 Test");
+        x1 = 100.0;
+        x2 = 50.0;
+        y1 = -50.0;
+        y2 = -100.0;
+        expResult = 70.71067811865476;
+        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
+        assertEquals(expResult, result, 0.00000000000001);
     }
 
     /**
