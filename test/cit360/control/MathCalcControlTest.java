@@ -30,8 +30,6 @@ public class MathCalcControlTest {
         double expResult = 0.0;
         double result = instance.calcVolumeTrianglePrism(base, length, height);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -47,8 +45,6 @@ public class MathCalcControlTest {
         double expResult = 0.0;
         double result = instance.calcAreaTrapezoid(base1, base2, height);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -105,8 +101,6 @@ public class MathCalcControlTest {
         double expResult = 0.0;
         double result = instance.calcTempConversion(degreeF);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
