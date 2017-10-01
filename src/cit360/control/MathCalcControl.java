@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kidacademy.control;
+package cit360.control;
 
-import kidacademy.exceptions.MathControlException;
+import cit360.exceptions.MathCalcControlException;
 
 /**
  *
- * @author Mann
+ * @author rdodenbier
  */
-public class MathControl {
-
+public class MathCalcControl {
+    
     public double calcVolumeTrianglePrism(double base, double length, double height)
-                    throws MathControlException {
+                    throws MathCalcControlException {
       try {
             //Check for invalid values
             if(base <= 0){
@@ -35,18 +35,18 @@ public class MathControl {
 
             //error handling
             if (volume <= 0){
-                throw new MathControlException("Answer cannot be less than zero");
+                throw new MathCalcControlException("Answer cannot be less than zero");
             }
 
             return volume;
             
-        } catch(MathControlException mce){
+        } catch(MathCalcControlException mce){
             return -1;
         }
     }
     
     public double calcAreaTrapezoid(double base1, double base2, double height)
-                    throws MathControlException {
+                    throws MathCalcControlException {
         try {
             //Check for invalid values
             if(base1 <= 0){
@@ -65,25 +65,25 @@ public class MathControl {
             double area = (base1 + base2) * (height/2);
 
             if (area <= 0){
-                throw new MathControlException("Answer cannot be less than zero");
+                throw new MathCalcControlException("Answer cannot be less than zero");
             }
 
            //Return outputs
              return area;
              
-        } catch (MathControlException mce) {
+        } catch (MathCalcControlException mce) {
             return -1;
         }
     }
                     
     public double calcDistanceTwoPoints(double x1, double x2, double y1, double y2)
-                    throws MathControlException {
+                    throws MathCalcControlException {
         try {
         //Check for invalid values
             if((x1 == y1 && x1 == x2 && x1 == y2) || (y1 == x1 && y1 == x2 && y1 == y2) ||
                 (x2 == y1 && x2 == x1 && x2 == y2) || (y2 == y1 && y2 == x2 && y2 == y1)) { 
                 
-                throw new MathControlException("Entered an invalid value");
+                throw new MathCalcControlException("Entered an invalid value");
             }            
 
             //Body statements
@@ -92,24 +92,24 @@ public class MathControl {
             //Return outputs
             return distance; 
             
-        } catch (MathControlException mce) {
+        } catch (MathCalcControlException mce) {
             return -1;
         }
     }
     
     public double calcTempConversion(double degreeF)
-                    throws MathControlException {
+                    throws MathCalcControlException {
         
         try {
             double degreeC = (5.0 / 9.0) * (degreeF - 32.0);
 
             if (degreeC == 0) {
-                throw new MathControlException("Answer cannot be zero");
+                throw new MathCalcControlException("Answer cannot be zero");
             }
 
             return degreeC;
         
-        } catch (MathControlException mce) {
+        } catch (MathCalcControlException mce) {
             return -1;
         }
     }

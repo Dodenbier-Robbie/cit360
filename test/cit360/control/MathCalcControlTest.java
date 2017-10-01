@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kidacademy.control;
+package cit360.control;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -12,13 +12,13 @@ import static org.junit.Assert.*;
  *
  * @author rdodenbier
  */
-public class MathControlTest {
+public class MathCalcControlTest {
     
-    public MathControlTest() {
+    public MathCalcControlTest() {
     }
 
     /**
-     * Test of calcVolumeTrianglePrism method, of class MathControl.
+     * Test of calcVolumeTrianglePrism method, of class MathCalcControl.
      */
     @Test
     public void testCalcVolumeTrianglePrism() throws Exception {
@@ -26,7 +26,7 @@ public class MathControlTest {
         double base = 0.0;
         double length = 0.0;
         double height = 0.0;
-        MathControl instance = new MathControl();
+        MathCalcControl instance = new MathCalcControl();
         double expResult = 0.0;
         double result = instance.calcVolumeTrianglePrism(base, length, height);
         assertEquals(expResult, result, 0.0);
@@ -35,7 +35,7 @@ public class MathControlTest {
     }
 
     /**
-     * Test of calcAreaTrapezoid method, of class MathControl.
+     * Test of calcAreaTrapezoid method, of class MathCalcControl.
      */
     @Test
     public void testCalcAreaTrapezoid() throws Exception {
@@ -43,7 +43,7 @@ public class MathControlTest {
         double base1 = 0.0;
         double base2 = 0.0;
         double height = 0.0;
-        MathControl instance = new MathControl();
+        MathCalcControl instance = new MathCalcControl();
         double expResult = 0.0;
         double result = instance.calcAreaTrapezoid(base1, base2, height);
         assertEquals(expResult, result, 0.0);
@@ -61,7 +61,7 @@ public class MathControlTest {
         double x2 = 20.0;
         double y1 = 5.0;
         double y2 = 15.0;
-        MathControl instance = new MathControl();
+        MathCalcControl instance = new MathCalcControl();
         double expResult = 14.14213562;
         double result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
         assertEquals(expResult, result, 0.00000001);
@@ -95,13 +95,13 @@ public class MathControlTest {
     }
 
     /**
-     * Test of calcTempConversion method, of class MathControl.
+     * Test of calcTempConversion method, of class MathCalcControl.
      */
     @Test
     public void testCalcTempConversion() throws Exception {
         System.out.println("calcTempConversion");
         double degreeF = 0.0;
-        MathControl instance = new MathControl();
+        MathCalcControl instance = new MathCalcControl();
         double expResult = 0.0;
         double result = instance.calcTempConversion(degreeF);
         assertEquals(expResult, result, 0.0);
