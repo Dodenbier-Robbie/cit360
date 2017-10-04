@@ -7,6 +7,8 @@ package cit360.control;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
 
 /**
  *
@@ -27,9 +29,9 @@ public class MathCalcControlTest {
         double length = 0.0;
         double height = 0.0;
         MathCalcControl instance = new MathCalcControl();
-        double expResult = 0.0;
+        double expResult = 1.0;
         double result = instance.calcVolumeTrianglePrism(base, length, height);
-        assertEquals(expResult, result, 0.0);
+        assertTrue("The tested result was false", result > 1.0);
     }
 
     /**
@@ -44,7 +46,7 @@ public class MathCalcControlTest {
         MathCalcControl instance = new MathCalcControl();
         double expResult = 0.0;
         double result = instance.calcAreaTrapezoid(base1, base2, height);
-        assertEquals(expResult, result, 0.0);
+        assertFalse("The tested result was true", result < 0.0);
     }
 
     /**
@@ -70,37 +72,33 @@ public class MathCalcControlTest {
         expResult = -1;
         result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
         assertEquals(expResult, result, 0.0);
-            
-        System.out.println("calcDistanceTwoPoints Unit 3 Test");
-        x1 = 0.0;
-        x2 = -1.0;
-        y1 = 1.0;
-        y2 = -1.0;
-        expResult = 2.23606797749979;
-        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
-        assertEquals(expResult, result, 0.00000000000001);
-        
-        System.out.println("calcDistanceTwoPoints Unit 4 Test");
-        x1 = 100.0;
-        x2 = 50.0;
-        y1 = -50.0;
-        y2 = -100.0;
-        expResult = 70.71067811865476;
-        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
-        assertEquals(expResult, result, 0.00000000000001);
-    }
-
-    /**
-     * Test of calcTempConversion method, of class MathCalcControl.
-     */
-    @Test
-    public void testCalcTempConversion() throws Exception {
-        System.out.println("calcTempConversion");
-        double degreeF = 0.0;
-        MathCalcControl instance = new MathCalcControl();
-        double expResult = 0.0;
-        double result = instance.calcTempConversion(degreeF);
-        assertEquals(expResult, result, 0.0);
     }
     
+    @Test
+    public void testArrayEquals() throws Exception {
+        System.out.println("testArrayEquals");
+        int[] testArray1 = {1,2,3,4,5,6};       
+        int[] testArray2 = {1,2,3,4,5,6};
+        assertArrayEquals(testArray1, testArray2);
+    } 
+    
+    @Test
+    public void testAssertThat() throws Exception {
+        System.out.println("testAssertThat");
+        assertThat("123",is("123"));
+    }
+    
+    @Test
+    public void testAssertNotSame() throws Exception {
+        String test1 = new String ("abc");
+        String test2 = new String ("abc");
+        String test3 = null;
+        String test4 = "abc";
+        String test5 = "abc";
+        
+        assertNull(test3);
+        assertNotNull(test4);
+        assertNotSame(test1,test3);
+        assertSame(test4,test5); 
+    }
 }
