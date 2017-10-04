@@ -85,7 +85,7 @@ public class MathCalcControlTest {
     @Test
     public void testAssertThat() throws Exception {
         System.out.println("testAssertThat");
-        assertThat("123",is("123"));
+        assertThat("testAssertThat",is("testAssertThat"));
     }
     
     @Test
