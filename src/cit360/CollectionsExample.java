@@ -30,7 +30,7 @@ public class CollectionsExample {
         listofcountries.add("Brazil");
         
         //Display Current ArrayList
-        System.out.println("Origial Array List:");
+                System.out.println("Origial Array List:");
         for(String counter: listofcountries) {
                 System.out.println(counter);
         }
@@ -39,13 +39,13 @@ public class CollectionsExample {
         listofcountries.remove(3);
         
         //Display Removed ArrayList
-        System.out.println("\nCurrent Array List:");
+                System.out.println("\nCurrent Array List:");
         for(String counter: listofcountries) {
                 System.out.println(counter);
         }
         
         //Display Unsorted List
-        System.out.println("\nBefore Sorting:");
+                System.out.println("\nBefore Sorting:");
         for(String counter: listofcountries) {
                 System.out.println(counter);
         }
@@ -54,7 +54,7 @@ public class CollectionsExample {
         Collections.sort(listofcountries);
         
         //Display Sorted List
-        System.out.println("\nAfter Sorting:");
+                System.out.println("\nAfter Sorting:");
         for(String counter: listofcountries) {
                 System.out.println(counter);
         }
@@ -68,7 +68,7 @@ public class CollectionsExample {
         linkedlist.add("Item7");
         
         //Display LinkedList items
-        System.out.println("\nOrignial LinkedList:");
+                System.out.println("\nOrignial LinkedList:");
         for(String counter: linkedlist) {
                 System.out.println(counter);
         }
@@ -78,7 +78,30 @@ public class CollectionsExample {
         linkedlist.addLast("Last Item");
         
         //Display LinkedList items
-        System.out.println("\nFirst/Last Item LinkedList:");
+                System.out.println("\nFirst/Last Item LinkedList:");
+        for(String counter: linkedlist) {
+                System.out.println(counter);
+        }
+        
+        //Get and Set values in the list
+        String firstItem = linkedlist.get(0);
+                System.out.println("\nFirst element is: " + firstItem);
+        linkedlist.set(0, "Changed First Item");
+        firstItem = linkedlist.get(0);
+                System.out.println("First element is: " + firstItem);
+        
+        //Remove first and last items in a list
+        linkedlist.removeFirst();
+        linkedlist.removeLast();
+                System.out.println("\nRemove First/Last LinkedList:");
+        for(String counter: linkedlist) {
+                System.out.println(counter);
+        }
+        
+        //Add/remove from a position in the list
+        linkedlist.add(0, "Additional Item");
+        linkedlist.remove(2);
+                System.out.println("\nFinal LinkedList:");
         for(String counter: linkedlist) {
                 System.out.println(counter);
         }
