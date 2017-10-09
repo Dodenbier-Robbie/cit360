@@ -8,6 +8,7 @@ package cit360;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  *
@@ -35,7 +36,7 @@ public class CollectionsExample {
                 System.out.println(counter);
         }
         
-        listofcountries.remove(5);
+        listofcountries.remove("Venezula");
         listofcountries.remove(3);
         
         //Display Removed ArrayList
@@ -105,5 +106,26 @@ public class CollectionsExample {
         for(String counter: linkedlist) {
                 System.out.println(counter);
         }
+        
+        //Queue example
+        Queue<String> peopleQueue = new LinkedList<String>();
+        
+        //Add people to queue
+        peopleQueue.add("Robbie");
+        peopleQueue.add("Michelle");
+        peopleQueue.add("Camden");
+        peopleQueue.add("Kenadie");
+        
+        //Display queue
+                System.out.println("\nQueue LinkedList:");
+        for(String counter: peopleQueue) {
+                System.out.println(counter);
+        }
+        
+        //Remove people from the queue
+        System.out.println("\nRemoved element: " + peopleQueue.poll());
+        
+        //Return first element in the queue
+        System.out.println("\nHead element: " + peopleQueue.peek());
     }   
 }
