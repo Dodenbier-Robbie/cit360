@@ -7,8 +7,12 @@ package cit360;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 /**
  *
@@ -127,5 +131,23 @@ public class CollectionsExample {
         
         //Return first element in the queue
         System.out.println("\nHead element: " + peopleQueue.peek());
+        
+        //HashMap Example
+        HashMap<Integer, String> peopleMap = new HashMap<Integer, String>();
+        
+        //Add people and map key
+        peopleMap.put(39, "Robbie");
+        peopleMap.put(37, "Michelle");
+        peopleMap.put(12, "Camden");
+        peopleMap.put(4, "Kenadie");
+        
+        //display map contents using iterator
+        Set set = peopleMap.entrySet();
+        Iterator iterator = set.iterator();
+        System.out.println("\nKey & Value output:");
+        while (iterator.hasNext()) {
+            Map.Entry mapEntry = (Map.Entry)iterator.next();
+            System.out.println("Key is: " + mapEntry.getKey() + " & value is: " + mapEntry.getValue());           
+        }
     }   
 }
