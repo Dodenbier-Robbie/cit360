@@ -8,6 +8,7 @@ package cit360;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
@@ -152,5 +153,28 @@ public class CollectionsExample {
         
         //Get specific element based on key
         System.out.println("\nSpecific Value: " + peopleMap.get(37));
+        
+        //HashSet Example
+        HashSet<String> fruitHash = new HashSet<String>();
+        
+        //adding items to the list
+        fruitHash.add("Strawberry");
+        fruitHash.add("Pineapple");
+        fruitHash.add("Apple");
+        fruitHash.add("Banana");
+        fruitHash.add("Peach");
+        
+        //adding duplicate values
+        fruitHash.add("Pineapple");
+        fruitHash.add("Apple");
+        
+        //adding null values
+        fruitHash.add(null);
+        
+        //display contents of list
+                System.out.println("\nFruit HashSet List:");
+        for(String counter: fruitHash) {
+                System.out.println(counter);
+        }
     }   
 }
