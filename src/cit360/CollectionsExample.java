@@ -149,5 +149,8 @@ public class CollectionsExample {
             Map.Entry mapEntry = (Map.Entry)iterator.next();
             System.out.println("Key is: " + mapEntry.getKey() + " & value is: " + mapEntry.getValue());           
         }
+        
+        //Get specific element based on key
+        System.out.println("\nSpecific Value: " + peopleMap.get(37));
     }   
 }
