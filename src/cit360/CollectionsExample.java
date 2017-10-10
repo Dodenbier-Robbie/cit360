@@ -26,6 +26,7 @@ public class CollectionsExample {
      */
     public static void main(String[] args) {
         //ArrayList Example
+        System.out.println("************************************Array Example***********************************");
         ArrayList<String> listofcountries = new ArrayList<String>();
         listofcountries.add("Netherlands");
         listofcountries.add("France");
@@ -65,6 +66,7 @@ public class CollectionsExample {
                 System.out.println(counter);
         }
         
+        System.out.println("\n************************************LinkedList Example***********************************");
         //LinkedList Example
         LinkedList<String> linkedlist = new LinkedList<String>();
         linkedlist.add("Item1");
@@ -112,6 +114,7 @@ public class CollectionsExample {
                 System.out.println(counter);
         }
         
+        System.out.println("\n************************************Queue Example***********************************");
         //Queue example
         Queue<String> peopleQueue = new LinkedList<String>();
         
@@ -133,6 +136,7 @@ public class CollectionsExample {
         //Return first element in the queue
         System.out.println("\nHead element: " + peopleQueue.peek());
         
+        System.out.println("\n************************************HashMap Example***********************************");
         //HashMap Example
         HashMap<Integer, String> peopleMap = new HashMap<Integer, String>();
         
@@ -154,6 +158,7 @@ public class CollectionsExample {
         //Get specific element based on key
         System.out.println("\nSpecific Value: " + peopleMap.get(37));
         
+        System.out.println("\n************************************HashSet Example***********************************");
         //HashSet Example
         HashSet<String> fruitHash = new HashSet<String>();
         
