@@ -5,6 +5,9 @@
  */
 package cit360;
 
+import cit360.view.HttpConnectionExample;
+import cit360.view.StartProgramView;
+
 /**
  *
  * @author rdodenbier
@@ -17,10 +20,8 @@ public class Cit360 {
        
     public static void main(String[] args) throws Exception {
         
-        HttpConnectionExample http = new HttpConnectionExample();
-
-	System.out.println("Testing 1 - Send Http GET request");
-	http.sendGet();
+        StartProgramView startProgramView = new StartProgramView ();
+        startProgramView.displayBanner();
         
     }    
 }
