@@ -14,8 +14,15 @@ public class Cit360 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+       
+    public static void main(String[] args) throws Exception {
+        
+        HttpConnectionExample http = new HttpConnectionExample();
+
+	System.out.println("Testing 1 - Send Http GET request");
+	http.sendGet();
+
+	System.out.println("\nTesting 2 - Send Http POST request");
+	http.sendPost();
+    }    
 }
