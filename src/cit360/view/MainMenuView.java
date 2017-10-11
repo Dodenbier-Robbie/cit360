@@ -115,6 +115,6 @@ class MainMenuView {
     }
 
     private void displayJUnit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Handled using the Test Suite");
     }
 }
