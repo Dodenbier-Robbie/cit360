@@ -21,7 +21,7 @@ public class StartProgramView {
         + "\n\nCurrent grading is a such:"
         + "\nJava Collections:\t\tTurned In"
         + "\nHibernate:\t\t\tNot yet started"
-        + "\nURL and HTTP:\t\t\tIn progress"
+        + "\nURL and HTTP:\t\t\tReady to turn in"
         + "\nJSON:\t\t\t\tNot yet started"
         + "\nJUnit:\t\t\t\tBasic"
         + "\nThreading:\t\t\tNot yet started"
