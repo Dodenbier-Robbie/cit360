@@ -54,7 +54,7 @@ public class HttpConnectionExample {
             System.out.println(response.toString());
         } else {
             con.disconnect();
-            System.out.println("GET request failed");
+            System.out.println("GET request failed. Your connection has been reset");
         }
         
         sendGet2();
