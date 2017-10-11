@@ -34,7 +34,6 @@ public class HttpConnectionExample {
 	con.setRequestProperty("User-Agent", USER_AGENT);
 
 	int responseCode = con.getResponseCode();
-        System.out.println("Testing 1 - Send Http GET request");
 	System.out.println("\nSending 'GET' request to URL : " + url);
 	System.out.println("Response Code : " + responseCode);
 
