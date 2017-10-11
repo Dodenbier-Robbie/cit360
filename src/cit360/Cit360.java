@@ -5,7 +5,7 @@
  */
 package cit360;
 
-import cit360.view.HttpConnectionExample;
+import cit360.control.HttpConnectionExample;
 import cit360.view.StartProgramView;
 
 /**
