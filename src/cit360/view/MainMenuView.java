@@ -5,6 +5,8 @@
  */
 package cit360.view;
 
+import cit360.control.CollectionsExample;
+import cit360.control.HttpConnectionExample;
 import java.util.Scanner;
 
 /**
