@@ -21,11 +21,11 @@ public class HighScoreExampleControl {
         ArrayList<HighScore> highScore = new ArrayList<>();
 
         // adding objects to the ArrayList
-        highScore.add(new HighScore("Michael", 400));
-        highScore.add(new HighScore("Andrew", 300));
-        highScore.add(new HighScore("RudyR", 200));
-        highScore.add(new HighScore("Peter", 100));
+        highScore.add(new HighScore("Robbie", 400));
         highScore.add(new HighScore("Camden", 50));
+        highScore.add(new HighScore("Peter", 100));
+        highScore.add(new HighScore("Michelle", 300));
+        highScore.add(new HighScore("Kenadie", 200));
         
         Collections.sort(highScore, new Comparator<HighScore>() {
             @Override
