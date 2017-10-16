@@ -14,6 +14,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -181,5 +182,25 @@ public class CollectionsExample {
         for(String counter: fruitHash) {
                 System.out.println(counter);
         }
+        
+        System.out.println("\n************************************TreeSet Example***********************************");
+        //TreeSet Example
+        
+        TreeSet<String> nameTree = new TreeSet<String>();
+        
+        nameTree.add("Robert");
+        nameTree.add("Wendy");
+        nameTree.add("Robert");
+        nameTree.add("Heidi");
+        nameTree.add("BJ");
+        nameTree.add("Hillary");
+        nameTree.add("Cyndel");
+        
+        Iterator<String> itr = nameTree.iterator();
+        while(itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        
+        
     }   
 }
