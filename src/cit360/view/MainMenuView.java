@@ -6,7 +6,9 @@
 package cit360.view;
 
 import cit360.control.CollectionsExample;
+import cit360.control.HighScoreExampleControl;
 import cit360.control.HttpConnectionExample;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -87,7 +89,16 @@ class MainMenuView {
                 break;
             case "5":
                 this.displayJUnit();
-                break;                 
+                break;
+            case "6":
+                this.displayThreading();
+                break;
+            case "7":
+                this.displayAPC();
+                break;
+            case "8":
+                this.displayMVC();
+                break;                  
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -116,5 +127,28 @@ class MainMenuView {
 
     private void displayJUnit() {
         System.out.println("Handled using the Test Suite");
+    }
+
+    private void displayThreading() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayAPC() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayMVC() {
+        HighScoreExampleControl displayHighScores = new HighScoreExampleControl();
+        ArrayList<HighScoreExampleControl.HighScore> displayScores;
+        displayScores = displayHighScores.getHighScores();
+        
+        System.out.println("\n" 
+                       + "\n-----------------------------------------"
+                       + "\n |High Scores                 |"
+                       + "\n-----------------------------------------");
+        
+        for (int i = 0; i < displayScores.size(); i++){
+            System.out.println(i+1 + ": " + displayScores.get(i));
+        }
     }
 }

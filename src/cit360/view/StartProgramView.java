@@ -19,7 +19,7 @@ public class StartProgramView {
         + "\n\nThis is your chance to review my code and"
         + "\nsee if it works!"
         + "\n\nCurrent grading is a such:"
-        + "\nJava Collections:\t\tTurned In"
+        + "\nJava Collections:\t\tBasic"
         + "\nHibernate:\t\t\tNot yet started"
         + "\nURL and HTTP:\t\t\tReady to turn in"
         + "\nJSON:\t\t\t\tNot yet started"
