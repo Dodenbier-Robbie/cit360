@@ -33,7 +33,7 @@ public class HighScoreView {
         do {
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("N"))
-                return; // exit the game
+                return;
                 
             done = this.doAction(menuOption);
             
