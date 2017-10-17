@@ -34,6 +34,9 @@ public class HighScoreView {
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("N"))
                 return;
+            
+            if (menuOption.toUpperCase().equals("Q"))
+                return;
                 
             done = this.doAction(menuOption);
             
@@ -92,6 +95,7 @@ public class HighScoreView {
         }
         
         displayMainMenu();
+        
     }
     
     private void displayMainMenu() throws Exception {
