@@ -20,7 +20,7 @@ public class HighScoreView {
     public HighScoreView() {
         this.menu = ("\n"
             + "\n-----------------------------------------"
-            + "\n |High Score Menu                        |"
+            + "\n |High Score Menu                       |"
             + "\n-----------------------------------------"
             + "\n\n Do you want to see the high scores?   "
             + "\n Y - Yes"
@@ -84,7 +84,7 @@ public class HighScoreView {
         
         System.out.println("\n"
             + "\n-----------------------------------------"
-            + "\n |Current High Scores                    |"
+            + "\n |Current High Scores                   |"
             + "\n-----------------------------------------");
         
         for (int i = 0; i < displayScores.size(); i++){
