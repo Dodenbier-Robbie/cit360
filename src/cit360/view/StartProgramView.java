@@ -18,7 +18,7 @@ public class StartProgramView {
         + "\nWelcome to CIT 360!!!!!!"
         + "\n\nThis is your chance to review my code and"
         + "\nsee if it works!"
-        + "\n\nCurrent grading is a such:"
+        + "\n\nCurrent grading is as such:"
         + "\nJava Collections:\t\tBasic"
         + "\nHibernate:\t\t\tNot yet started"
         + "\nURL and HTTP:\t\t\tReady to turn in"
