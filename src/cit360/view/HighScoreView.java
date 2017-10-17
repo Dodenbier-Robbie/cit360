@@ -22,9 +22,9 @@ public class HighScoreView {
             + "\n-----------------------------------------"
             + "\n |High Score Menu                       |"
             + "\n-----------------------------------------"
-            + "\n\n Do you want to see the high scores?   "
-            + "\n Y - Yes"
-            + "\n N - No"   
+            + "\n\nDo you want to see the high scores?   "
+            + "\nY - Yes"
+            + "\nN - No"   
             + "\n-----------------------------------------");                
     }
     
