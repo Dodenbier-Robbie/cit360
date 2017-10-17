@@ -6,7 +6,7 @@
 package cit360.view;
 
 import cit360.control.CollectionsExample;
-import cit360.control.HighScoreExampleControl;
+import cit360.control.HighScoreController;
 import cit360.control.HttpConnectionExample;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -137,18 +137,8 @@ class MainMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displayMVC() {
-        HighScoreExampleControl displayHighScores = new HighScoreExampleControl();
-        ArrayList<HighScoreExampleControl.HighScore> displayScores;
-        displayScores = displayHighScores.getHighScores();
-        
-        System.out.println("\n" 
-                       + "\n-----------------------------------------"
-                       + "\n |High Scores                 |"
-                       + "\n-----------------------------------------");
-        
-        for (int i = 0; i < displayScores.size(); i++){
-            System.out.println(i+1 + ": " + displayScores.get(i));
-        }
+    private void displayMVC() throws Exception {
+        HighScoreView highScoreView = new HighScoreView();
+        highScoreView.displayMenu();
     }
 }
