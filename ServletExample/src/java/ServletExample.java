@@ -7,6 +7,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Calendar;
+import java.util.Enumeration;
 import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,8 +52,8 @@ public class ServletExample extends HttpServlet {
             am_pm = "PM";
         
         String currentDateTime = month + "/" + day + "/" + year + " (" + hour + ":" + minute + ":" + second + " " + am_pm + " )";
-        
-        if(response.getStatus() == 200) {   
+              
+        if(response.getStatus() == 200) {            
             out.write(doctype + 
                     "\n<html>\n"
                   + "<head>\n"
@@ -68,12 +69,14 @@ public class ServletExample extends HttpServlet {
                   + "<th>Last Name</th>"
                   + "<th>Email</th>"
                   + "<th>Phone Number</th>"
+                  + "<th>Favorite Color</th>"
                   + "<tr>\n"
                   + "<tr>\n"
                   + "<td>" + request.getParameter("firstName") + "</td>\n"
                   + "<td>" + request.getParameter("lastName") + "</td>\n"
                   + "<td>" + request.getParameter("email") + "</td>\n"
                   + "<td>" + request.getParameter("phoneNumber") + "</td>\n"
+                  + "<td>" + request.getParameter("colors") + "</td>\n"
                   + "</tr>\n"
                   + "</table>\n"
                   + "<p class=\"currentDate\"><em>Received by server: " + currentDateTime + "</em></p>\n"

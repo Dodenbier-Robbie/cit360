@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -9,7 +10,7 @@ and open the template in the editor.
         <title>CIT 360 Servlet Example</title>
     </head>
 <style>
-input {
+input[type=text], input[type=tel], input[type=email] {
     width: 25%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -22,12 +23,21 @@ input {
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
+    width: 25%;
+    padding: 10px;
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
+
 </style>
    <body>
        <h1>CIT 360 Servlet Example</h1>
        <p>Enter your details to have it submitted to the web server:</p>
-<div id = "inputForm">
       <form action = "ServletExample" method = "GET">
          First Name: <br><input type="text" name="firstName">
          <br />
@@ -36,9 +46,18 @@ input[type=submit] {
          Email Address: <br><input type="email" name="email" />
          <br />
          Phone Number: <br><input type="tel" name="phoneNumber" />
-<br />
+        <br />
+        Favorite Color: <br><select name="colors">
+            <option value="default" selected disabled hidden>Select Color ...</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="Pink">Pink</option>
+            <option vlaue="Purple">Purple</option>
+            <option value="Black">Black</option>
+        </select>
+        <br />
          <input type="submit" value="Submit" />
       </form>
-</div>
    </body>
 </html>
