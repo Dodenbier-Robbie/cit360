@@ -25,11 +25,4 @@ public class Cit360 {
         StartProgramView startProgramView = new StartProgramView ();
         startProgramView.displayBanner();
     }
-
-    public static Player retrievePlayerFromDatabase() {
-        Player player = new Player();
-        player.setPlayerName("Michelle");
-        player.setPlayerScore(300);
-        return player;
-    }
 }

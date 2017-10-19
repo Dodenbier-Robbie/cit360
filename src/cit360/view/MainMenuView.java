@@ -5,7 +5,6 @@
  */
 package cit360.view;
 
-import static cit360.Cit360.retrievePlayerFromDatabase;
 import cit360.control.CollectionsExample;
 import cit360.control.HttpConnectionExample;
 import cit360.control.PlayerController;
