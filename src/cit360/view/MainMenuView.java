@@ -140,9 +140,7 @@ class MainMenuView {
 
     private void displayMVC() throws Exception {
         Player model = new Player();
-        
         PlayerView view = new PlayerView();
-        
         PlayerController controller = new PlayerController(model, view);
         
         controller.setPlayerName("Robbie");
