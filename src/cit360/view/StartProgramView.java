@@ -26,7 +26,7 @@ public class StartProgramView {
         + "\nJUnit:\t\t\t\tBasic"
         + "\nThreading:\t\t\tNot yet started"
         + "\nACP:\t\t\t\tNot yet started"
-        + "\nMVC:\t\t\t\tNeeds Revision"
+        + "\nMVC:\t\t\t\tTurned In"
         + "\nServlet:\t\t\tReady to turn in"
         + "\n************************************************"
         );
