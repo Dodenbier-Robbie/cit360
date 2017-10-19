@@ -5,7 +5,9 @@
  */
 package cit360;
 
-import cit360.control.HttpConnectionExample;
+import cit360.control.PlayerController;
+import cit360.model.Player;
+import cit360.view.PlayerView;
 import cit360.view.StartProgramView;
 
 /**
@@ -22,6 +24,12 @@ public class Cit360 {
         
         StartProgramView startProgramView = new StartProgramView ();
         startProgramView.displayBanner();
-        
-    }    
+    }
+
+    public static Player retrievePlayerFromDatabase() {
+        Player player = new Player();
+        player.setPlayerName("Michelle");
+        player.setPlayerScore(300);
+        return player;
+    }
 }

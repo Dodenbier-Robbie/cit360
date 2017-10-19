@@ -5,10 +5,11 @@
  */
 package cit360.view;
 
+import static cit360.Cit360.retrievePlayerFromDatabase;
 import cit360.control.CollectionsExample;
-import cit360.control.HighScoreController;
 import cit360.control.HttpConnectionExample;
-import java.util.ArrayList;
+import cit360.control.PlayerController;
+import cit360.model.Player;
 import java.util.Scanner;
 
 /**
@@ -138,7 +139,22 @@ class MainMenuView {
     }
 
     private void displayMVC() throws Exception {
-        HighScoreView highScoreView = new HighScoreView();
-        highScoreView.displayMenu();
+        Player model = new Player();
+        
+        PlayerView view = new PlayerView();
+        
+        PlayerController controller = new PlayerController(model, view);
+        
+        controller.setPlayerName("Robbie");
+        controller.setPlayerScore(500);
+        controller.updateView();
+        
+        controller.setPlayerName("Michelle");
+        controller.setPlayerScore(300);
+        controller.updateView();
+        
+        controller.setPlayerName("Camden");
+        controller.setPlayerScore(100);
+        controller.updateView();
     }
 }
