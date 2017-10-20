@@ -130,6 +130,7 @@ class MainMenuView {
     private void displayJSON() throws IOException {
         JSONExample displayJSON = new JSONExample();
         displayJSON.JSONencodeExample();
+        displayJSON.JSONdecodeExample();
     }
 
     private void displayJUnit() {

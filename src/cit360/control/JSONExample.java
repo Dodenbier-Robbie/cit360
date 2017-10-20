@@ -13,6 +13,7 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 
@@ -24,16 +25,22 @@ import java.util.Iterator;
 public class JSONExample {
     
     public void JSONencodeExample() {
-        JSONObject obj = new JSONObject();
         
-        obj.put("name", "foo");
-        obj.put("num", new Integer(100));
-        obj.put("blance", new Double(100.21));
-        obj.put("is_vip", new Boolean(true));
+        ArrayList<String> location = new ArrayList<>();
+            location.add("Disneyland");
+            location.add("Magic Kingdom");
+            location.add("Tokyo Disneyland");
+            location.add("Hong Kong Disneyland");
+            
+        JSONObject jsonobject = new JSONObject();        
+            jsonobject.put("ride", "Jungle Cruise");
+            jsonobject.put("location", location);
+            jsonobject.put("firstOpen", "July 17, 1955");
+            jsonobject.put("heightRestriction", "None");
+            jsonobject.put("picURL", "https://upload.wikimedia.org/wikipedia/commons/b/b1/Jungle_Cruise_Entrance_Sunset.JPG");
         
-        System.out.println(obj);
-        
-        JSONdecodeExample();
+        System.out.println("\nExample of JSON Encoded:");    
+        System.out.println(jsonobject);
     }
     
     public void JSONdecodeExample() {
