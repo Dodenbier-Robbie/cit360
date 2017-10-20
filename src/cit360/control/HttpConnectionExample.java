@@ -19,11 +19,12 @@ import java.net.URL;
 public class HttpConnectionExample {
     
     private final String USER_AGENT = "Mozilla/5.0";
+    private String url;
     
     // HTTP GET request
-    public void sendGet() throws IOException {
+    public void sendGet(String url) throws IOException {
 
-	String url = "https://dodenbier-robbie.github.io/cit360/HttpConnection.html";
+	this.url = url;
 
 	URL obj = new URL(url);
 	HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -56,46 +57,5 @@ public class HttpConnectionExample {
             con.disconnect();
             System.out.println("GET request failed. Your connection has been reset");
         }
-        
-        sendGet2();
-    }
-    
-    public void sendGet2() throws IOException {
-
-	String url = "http://www.android.com";
-
-	URL obj = new URL(url);
-	HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-	// optional default is GET
-	con.setRequestMethod("GET");
-
-	//add request header
-	con.setRequestProperty("User-Agent", USER_AGENT);
-
-	int responseCode = con.getResponseCode();
-        System.out.println("\n****** Sending GET request - Test 2 ******");
-	System.out.println("\nSending 'GET' request to URL : " + url);
-	System.out.println("Response Code : " + responseCode);
-
-        if(responseCode == con.HTTP_OK) {
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
-            }
-            in.close();
-
-            //print result
-            System.out.println(response.toString());
-        } else {
-            con.disconnect();
-            System.out.println("GET request failed. Your connection has been reset");
-       
-        }
-
     }
 }

@@ -10,6 +10,7 @@ import cit360.control.HttpConnectionExample;
 import cit360.control.JSONExample;
 import cit360.control.PlayerController;
 import cit360.model.Player;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -118,11 +119,14 @@ class MainMenuView {
     }
 
     private void displayURL() throws Exception {
+        String url = "https://dodenbier-robbie.github.io/cit360/HttpConnection.html";
+        String url2 = "http://www.android.com";
         HttpConnectionExample displayUrl = new HttpConnectionExample();
-        displayUrl.sendGet();
+        displayUrl.sendGet(url);
+        displayUrl.sendGet(url);
     }
 
-    private void displayJSON() {
+    private void displayJSON() throws IOException {
         JSONExample displayJSON = new JSONExample();
         displayJSON.JSONencodeExample();
     }
