@@ -7,6 +7,7 @@ package cit360.view;
 
 import cit360.control.CollectionsExample;
 import cit360.control.HttpConnectionExample;
+import cit360.control.JSONExample;
 import cit360.control.PlayerController;
 import cit360.model.Player;
 import java.util.Scanner;
@@ -122,7 +123,8 @@ class MainMenuView {
     }
 
     private void displayJSON() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        JSONExample displayJSON = new JSONExample();
+        displayJSON.JSONencodeExample();
     }
 
     private void displayJUnit() {
