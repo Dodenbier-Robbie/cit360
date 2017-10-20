@@ -64,7 +64,7 @@ public class JSONExample {
                 Iterator<String> iterator = location.iterator();
                 System.out.println("Locations:");
                 while (iterator.hasNext()) {
-                    System.out.println(iterator.next());
+                    System.out.println("  " + iterator.next());
                 }
             }
             
