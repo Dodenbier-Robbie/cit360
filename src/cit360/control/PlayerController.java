@@ -38,8 +38,16 @@ public class PlayerController {
         return model.getPlayerScore();
     }
     
+    public void setPlayerId(int id) {
+        model.setPlayerId(id);
+    }
+    
+    public int getPlayerId() {
+        return model.getPlayerId();
+    }
+    
     public void updateView() {
-        view.printPlayerInfo(model.getPlayerName(), model.getPlayerScore());
+        view.printPlayerInfo(model.getPlayerName(), model.getPlayerScore(), model.getPlayerId());
     }
     
 }

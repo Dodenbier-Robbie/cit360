@@ -13,6 +13,7 @@ public class Player {
     
     private String playerName;
     private int playerScore;
+    private int playerId;
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
@@ -28,6 +29,14 @@ public class Player {
 
     public void setPlayerScore(int playerScore) {
         this.playerScore = playerScore;
+    }
+    
+    public int getPlayerId() {
+        return playerId;
+    }
+    
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
     }
     
 }
