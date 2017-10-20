@@ -36,7 +36,7 @@ public class HttpConnectionExample {
 	con.setRequestProperty("User-Agent", USER_AGENT);
 
 	int responseCode = con.getResponseCode();
-        System.out.println("****** Sending GET request - Test 1 ******");
+        System.out.println("\n****** Sending GET request ******");
 	System.out.println("\nSending 'GET' request to URL : " + url);
 	System.out.println("Response Code : " + responseCode);
 
@@ -55,7 +55,7 @@ public class HttpConnectionExample {
             System.out.println(response.toString());
         } else {
             con.disconnect();
-            System.out.println("GET request failed. Your connection has been reset");
+            System.out.println("GET request failed. Your connection has been reset!!");
         }
     }
 }

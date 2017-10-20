@@ -121,9 +121,10 @@ class MainMenuView {
     private void displayURL() throws Exception {
         String url = "https://dodenbier-robbie.github.io/cit360/HttpConnection.html";
         String url2 = "http://www.android.com";
+        
         HttpConnectionExample displayUrl = new HttpConnectionExample();
         displayUrl.sendGet(url);
-        displayUrl.sendGet(url);
+        displayUrl.sendGet(url2);
     }
 
     private void displayJSON() throws IOException {
