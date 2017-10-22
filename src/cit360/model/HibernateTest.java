@@ -23,32 +23,12 @@ public class HibernateTest {
     private static SessionFactory factory;
     private static Transaction tx;
     
-    public static void main(String[] args) {
-        try {
-            factory = new Configuration().configure().buildSessionFactory();
-        }catch (Throwable ex) { 
-            System.err.println("Failed to create sessionFactory object." + ex);
-        }
-        
-        HibernateTest HT = new HibernateTest();
-        System.out.println("*** Adding Player to database ***");
-        HT.addPlayer("Robbie", "Dodenbier", 500);
-        HT.addPlayer("Michelle", "Dodenbier", 300);
-        HT.addPlayer("Camden", "Dodenbier", 100);
-        HT.addPlayer("Kenandie", "Dodenbier", 50);
-        
-        System.out.println("\n*** Returned Players from database ***");
-        HT.getListPlayers();
-        
-        System.out.println("\n*** Update Player score in database ***");
-        HT.updatePlayerScore(2, 5000);
-        
-        System.out.println("\n*** Player deleted from database ***");
-        HT.deletePlayer(2);
-        HT.getListPlayers();
-    }  
-    
+    public HibernateTest () {
+        factory = new Configuration().configure().buildSessionFactory();
+    }
+
     public void addPlayer(String firstName, String lastName, int score) {
+        factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         try {
             tx = session.beginTransaction();
@@ -65,6 +45,7 @@ public class HibernateTest {
     }
     
     public void getListPlayers() {
+        factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         try {
             tx = session.beginTransaction();
@@ -88,6 +69,7 @@ public class HibernateTest {
     }
     
     public void updatePlayerScore(int playerId, int score) {
+        factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         try {
             String hql = "UPDATE Player set score = :score "  + 
@@ -117,6 +99,7 @@ public class HibernateTest {
     }
     
     public void deletePlayer (int playerId){
+        factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
         try {
             String hql = ("DELETE FROM Player "  + 

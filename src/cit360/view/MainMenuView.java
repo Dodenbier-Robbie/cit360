@@ -9,6 +9,7 @@ import cit360.control.CollectionsExample;
 import cit360.control.HttpConnectionExample;
 import cit360.control.JSONExample;
 import cit360.control.PlayerController;
+import cit360.model.HibernateTest;
 import cit360.model.Player;
 import java.io.IOException;
 import java.util.Scanner;
@@ -115,7 +116,23 @@ class MainMenuView {
     }
 
     private void displayHibernation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HibernateTest HT = new HibernateTest();
+        System.out.println("*** Adding Player to database ***");
+        HT.addPlayer("Robbie", "Dodenbier", 500);
+        HT.addPlayer("Michelle", "Dodenbier", 300);
+        HT.addPlayer("Camden", "Dodenbier", 100);
+        HT.addPlayer("Kenandie", "Dodenbier", 50);
+        
+        System.out.println("\n*** Returned Players from database ***");
+        HT.getListPlayers();
+        
+        System.out.println("\n*** Update Player score in database ***");
+        HT.updatePlayerScore(2, 5000);
+        
+        System.out.println("\n*** Player deleted from database ***");
+        HT.deletePlayer(2);
+        HT.getListPlayers();    
+                
     }
 
     private void displayURL() throws Exception {
