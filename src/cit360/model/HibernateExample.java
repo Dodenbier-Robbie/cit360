@@ -22,6 +22,7 @@ public class HibernateExample {
 
     private static SessionFactory factory;
     private static Transaction tx;
+    private static Session session;
     
     public HibernateExample () {
         try {
@@ -32,7 +33,7 @@ public class HibernateExample {
     }
 
     public void addPlayer(String firstName, String lastName, int score) {
-        Session session = factory.openSession();
+        session = factory.openSession();
         try {
             tx = session.beginTransaction();
             Player player = new Player(firstName, lastName, score);
@@ -48,7 +49,7 @@ public class HibernateExample {
     }
     
     public void getListPlayers() {
-        Session session = factory.openSession();
+        session = factory.openSession();
         try {
             tx = session.beginTransaction();
             List players = session.createQuery("FROM Player").list();
@@ -71,7 +72,7 @@ public class HibernateExample {
     }
     
     public void updatePlayerScore(int playerId, int score) {
-        Session session = factory.openSession();
+        session = factory.openSession();
         try {
                 tx = session.beginTransaction();
                 Player player = (Player)session.get(Player.class, playerId);
@@ -95,7 +96,7 @@ public class HibernateExample {
     }
     
     public void deletePlayer (int playerId){
-        Session session = factory.openSession();
+        session = factory.openSession();
         try {
             tx = session.beginTransaction();
             Player player = (Player)session.get(Player.class, playerId);
