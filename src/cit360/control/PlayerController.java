@@ -22,12 +22,20 @@ public class PlayerController {
      this.view = view;
     }
     
-    public void setPlayerName(String name) {
-        model.setPlayerName(name);
+    public void setPlayerFirstName(String firstName) {
+        model.setPlayerFirstName(firstName);
     }
     
-    public String getPlayerName() {
-        return model.getPlayerName();
+    public String getPlayerFirstName() {
+        return model.getPlayerFirstName();
+    }
+    
+    public void setPlayerLastName(String lastName) {
+        model.setPlayerFirstName(lastName);
+    }
+    
+    public String getPlayerLastName() {
+        return model.getPlayerLastName();
     }
     
     public void setPlayerScore(int score) {
@@ -47,7 +55,7 @@ public class PlayerController {
     }
     
     public void updateView() {
-        view.printPlayerInfo(model.getPlayerName(), model.getPlayerScore(), model.getPlayerId());
+        view.printPlayerInfo(model.getPlayerFirstName(), model.getPlayerLastName(), model.getPlayerScore(), model.getPlayerId());
     }
     
 }
