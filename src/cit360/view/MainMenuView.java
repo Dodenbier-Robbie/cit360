@@ -151,17 +151,20 @@ class MainMenuView {
         PlayerController controller = new PlayerController(model, view);
         
         controller.setPlayerId(1);
-        controller.setPlayerName("Robbie");
+        controller.setPlayerFirstName("Robbie");
+        controller.setPlayerLastName("Dodenbier");
         controller.setPlayerScore(500);
         controller.updateView();
         
         controller.setPlayerId(2);
-        controller.setPlayerName("Michelle");
+        controller.setPlayerFirstName("Michelle");
+        controller.setPlayerLastName("Dodenbier");
         controller.setPlayerScore(300);
         controller.updateView();
         
         controller.setPlayerId(3);
-        controller.setPlayerName("Camden");
+        controller.setPlayerFirstName("Camden");
+        controller.setPlayerLastName("Dodenbier");
         controller.setPlayerScore(100);
         controller.updateView();
     }

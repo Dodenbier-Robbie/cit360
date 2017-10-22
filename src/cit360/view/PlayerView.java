@@ -11,10 +11,11 @@ package cit360.view;
  */
 public class PlayerView {
     
-    public void printPlayerInfo(String playerName, int playerScore, int playerId) {
+    public void printPlayerInfo(String playerFirstName, String playerLastName, int playerScore, int playerId) {
         System.out.println("\nPlayer"
                 + "\nID: " + playerId
-                + "\nName: " + playerName
+                + "\nFirst Name: " + playerFirstName
+                + "\nLast Name: " + playerLastName
                 + "\nScore: " + playerScore);
     }
 }

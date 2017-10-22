@@ -11,16 +11,34 @@ package cit360.model;
  */
 public class Player {
     
-    private String playerName;
+    private String playerFirstName;
+    private String playerLastName;
     private int playerScore;
     private int playerId;
-
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
+    
+    public Player() {
     }
     
-    public String getPlayerName() {
-        return playerName;
+    public Player(String playerFirstName, String playerLastName, int playerScore  ) {
+        this.playerFirstName = playerFirstName;
+        this.playerLastName = playerLastName;
+        this.playerScore = playerScore;
+    }
+
+    public void setPlayerFirstName(String playerFirstName) {
+        this.playerFirstName = playerFirstName;
+    }
+    
+    public String getPlayerFirstName() {
+        return playerFirstName;
+    }
+    
+    public void setPlayerLastName(String playerLastName) {
+        this.playerLastName = playerLastName;
+    }
+    
+    public String getPlayerLastName() {
+        return playerLastName;
     }
 
     public int getPlayerScore() {
@@ -38,5 +56,4 @@ public class Player {
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
-    
 }
