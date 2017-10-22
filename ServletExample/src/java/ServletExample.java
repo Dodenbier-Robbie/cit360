@@ -33,7 +33,8 @@ public class ServletExample extends HttpServlet {
         String title = "CTI 360 Servlet Example";
         String doctype = "<!DOCTYPE HTML>";
         String cssStyles = "table {\n" + "border-collapse: collapse;\n" + "}\n" + "table, th, td {\n" + "border: 1px solid black;\n" +
-            "}\n" + "th, td {\n" + "padding: 10px;\n" + "text-align: left;\n" + "}\n" + ".currentDate {\n" + "font-size: 12px;\n" + "}";
+            "}\n" + "th, td {\n" + "padding: 10px;\n" + "text-align: left;\n" + "}\n" + ".currentDate {\n" + "font-size: 12px;\n" + "}" + 
+            "tbody th {background-color: #628ca6;color: white;};";
         
         // Get current time and date
         Calendar calendar = new GregorianCalendar();
