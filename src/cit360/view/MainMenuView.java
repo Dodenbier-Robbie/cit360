@@ -9,7 +9,7 @@ import cit360.control.CollectionsExample;
 import cit360.control.HttpConnectionExample;
 import cit360.control.JSONExample;
 import cit360.control.PlayerController;
-import cit360.model.HibernateTest;
+import cit360.model.HibernateExample;
 import cit360.model.Player;
 import java.io.IOException;
 import java.util.Scanner;
@@ -116,22 +116,22 @@ class MainMenuView {
     }
 
     private void displayHibernation() {
-        HibernateTest HT = new HibernateTest();
+        HibernateExample hibernate = new HibernateExample();
         System.out.println("*** Adding Player to database ***");
-        HT.addPlayer("Robbie", "Dodenbier", 500);
-        HT.addPlayer("Michelle", "Dodenbier", 300);
-        HT.addPlayer("Camden", "Dodenbier", 100);
-        HT.addPlayer("Kenandie", "Dodenbier", 50);
+        hibernate.addPlayer("Robbie", "Dodenbier", 500);
+        hibernate.addPlayer("Michelle", "Dodenbier", 300);
+        hibernate.addPlayer("Camden", "Dodenbier", 100);
+        hibernate.addPlayer("Kenandie", "Dodenbier", 50);
         
         System.out.println("\n*** Returned Players from database ***");
-        HT.getListPlayers();
+        hibernate.getListPlayers();
         
         System.out.println("\n*** Update Player score in database ***");
-        HT.updatePlayerScore(2, 5000);
+        hibernate.updatePlayerScore(2, 5000);
         
         System.out.println("\n*** Player deleted from database ***");
-        HT.deletePlayer(2);
-        HT.getListPlayers();    
+        hibernate.deletePlayer(2);
+        hibernate.getListPlayers();    
                 
     }
 
