@@ -28,6 +28,11 @@ public class StartProgramView {
         + "\nACP:\t\t\t\tNot yet started"
         + "\nMVC:\t\t\t\tTurned In"
         + "\nServlet:\t\t\tTurned in"
+        + "\nUse Case Diagrams:\t\tNot yet started"
+        + "\nUse Case Documents:\t\tNot yet started"
+        + "\nState Diagrams:\t\t\tNot yet started"
+        + "\nSequence Diagrams:\t\tNot yet started"
+        + "\nSystem Level Tests:\t\tNot yet started"
         + "\n************************************************"
         );
         
