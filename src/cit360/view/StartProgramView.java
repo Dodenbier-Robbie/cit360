@@ -20,14 +20,14 @@ public class StartProgramView {
         + "\nsee if it works!"
         + "\n\nCurrent grading is as such:"
         + "\nJava Collections:\t\tBasic"
-        + "\nHibernate:\t\t\tReady to turn in"
+        + "\nHibernate:\t\t\tTurned in"
         + "\nURL and HTTP:\t\t\tTurned in"
-        + "\nJSON:\t\t\t\tReady to turn in"
+        + "\nJSON:\t\t\t\tTurned in"
         + "\nJUnit:\t\t\t\tBasic"
         + "\nThreading:\t\t\tNot yet started"
         + "\nACP:\t\t\t\tNot yet started"
         + "\nMVC:\t\t\t\tTurned In"
-        + "\nServlet:\t\t\tReady to turn in"
+        + "\nServlet:\t\t\tTurned in"
         + "\n************************************************"
         );
         
