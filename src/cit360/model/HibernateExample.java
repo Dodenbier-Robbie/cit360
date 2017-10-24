@@ -5,6 +5,7 @@
  */
 package cit360.model;
 
+import com.mysql.jdbc.Connection;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.HibernateException;
