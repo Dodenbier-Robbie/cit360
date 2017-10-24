@@ -27,7 +27,7 @@ public class StartProgramView {
         + "\nThreading:\t\t\tNot yet started"
         + "\nACP:\t\t\t\tNot yet started"
         + "\nMVC:\t\t\t\tBasic"
-        + "\nServlet:\t\t\tTurned in"
+        + "\nServlet:\t\t\tWork on Revision"
         + "\nUse Case Diagrams:\t\tNot yet started"
         + "\nUse Case Documents:\t\tNot yet started"
         + "\nState Diagrams:\t\t\tNot yet started"
