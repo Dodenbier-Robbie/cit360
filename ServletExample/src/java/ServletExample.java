@@ -52,6 +52,11 @@ public class ServletExample extends HttpServlet {
             am_pm = "PM";
         
         String currentDateTime = month + "/" + day + "/" + year + " (" + hour + ":" + minute + ":" + second + " " + am_pm + " )";
+        
+        // Do math calculation
+        int number1 = Integer.parseInt(request.getParameter("number1"));
+        int number2 = Integer.parseInt(request.getParameter("number2"));
+        int result = number1 * number2;
               
         if(response.getStatus() == 200) {            
             out.write(doctype + 
@@ -70,6 +75,7 @@ public class ServletExample extends HttpServlet {
                   + "<th>Email</th>"
                   + "<th>Phone Number</th>"
                   + "<th>Favorite Color</th>"
+                  + "<th>Math Answer</th>"
                   + "<tr>\n"
                   + "<tr>\n"
                   + "<td>" + request.getParameter("firstName") + "</td>\n"
@@ -77,6 +83,7 @@ public class ServletExample extends HttpServlet {
                   + "<td>" + request.getParameter("email") + "</td>\n"
                   + "<td>" + request.getParameter("phoneNumber") + "</td>\n"
                   + "<td>" + request.getParameter("colors") + "</td>\n"
+                  + "<td>" + result + "</td>\n"
                   + "</tr>\n"
                   + "</table>\n"
                   + "<p class=\"currentDate\"><em>Received by server: " + currentDateTime + "</em></p>\n"
