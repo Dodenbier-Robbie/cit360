@@ -15,9 +15,4 @@ public class MathSubtraction implements DoMathCalculation {
         int result = number1 - number2;
         System.out.println(result);
     }
-    
-    public Integer subtraction(int x, int y) {
-        return x - y;
-    }
-    
 }

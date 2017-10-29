@@ -15,9 +15,4 @@ public class MathAddition implements DoMathCalculation {
         int result = number1 + number2;
         System.out.println(result);
     }
-    
-    public int addition(int x, int y) {
-        return x + y;
-    }
-    
 }

@@ -15,9 +15,4 @@ public class MathDivision implements DoMathCalculation {
         int result = number1 / number2;
         System.out.println(result);
     }
-    
-    public int division(int x, int y) {
-        return x / y;
-    }
-    
 }
