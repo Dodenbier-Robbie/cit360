@@ -25,7 +25,7 @@ public class StartProgramView {
         + "\nJSON:\t\t\t\tBasic"
         + "\nJUnit:\t\t\t\tBasic"
         + "\nThreading:\t\t\tNot yet started"
-        + "\nACP:\t\t\t\tNot yet started"
+        + "\nACP:\t\t\t\tReady to turn in"
         + "\nMVC:\t\t\t\tBasic"
         + "\nServlet:\t\t\tTurned in"
         + "\nUse Case Diagrams:\t\tNot yet started"

@@ -19,7 +19,7 @@ public class MathCalculatorView {
         
     }
     
-    public void getMathInput() throws IOException {
+    public void doMathInput() throws IOException {
         ApplicationController handle = new ApplicationController();
         int number1;
         int number2;

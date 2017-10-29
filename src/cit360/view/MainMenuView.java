@@ -158,9 +158,9 @@ class MainMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displayAPC() {
+    private void displayAPC() throws IOException {
         MathCalculatorView mathCalculator = new MathCalculatorView();
-        mathCalculator.getMathInput();
+        mathCalculator.doMathInput();
         
     }
 
