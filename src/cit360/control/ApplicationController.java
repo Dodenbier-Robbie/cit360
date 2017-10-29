@@ -25,6 +25,7 @@ public class ApplicationController {
         mathCommands.put("-", new MathSubtraction());
         mathCommands.put("*", new MathMultiplication());
         mathCommands.put("/", new MathDivision());
+        mathCommands.put("^", new MathPower());
         
         DoMathCalculation mathCalc = mathCommands.get(command);
         

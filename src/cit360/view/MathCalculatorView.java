@@ -30,7 +30,7 @@ public class MathCalculatorView {
 
             System.out.println("Enter your first number: ");
             number1 = Integer.parseInt(in.nextLine());
-            System.out.println("Enter a math operator (+, -, *, /): ");
+            System.out.println("Enter a math operator (+, -, *, /, ^): ");
             operator = in.nextLine();
             System.out.println("Enter your second number: ");
             number2 = Integer.parseInt(in.nextLine());
