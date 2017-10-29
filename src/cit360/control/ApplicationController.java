@@ -19,7 +19,7 @@ public class ApplicationController {
         
     }
     
-    public static void handleMathCommands(String command, int number1, int number2) {
+    public static void handleMathCommands(String operator, int number1, int number2) {
         
         mathCommands.put("+", new MathAddition());
         mathCommands.put("-", new MathSubtraction());
@@ -27,7 +27,7 @@ public class ApplicationController {
         mathCommands.put("/", new MathDivision());
         mathCommands.put("^", new MathPower());
         
-        DoMathCalculation mathCalc = mathCommands.get(command);
+        DoMathCalculation mathCalc = mathCommands.get(operator);
         
         mathCalc.execute(number1, number2);
     }

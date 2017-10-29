@@ -20,7 +20,7 @@ public class MathCalculatorView {
     }
     
     public void getMathInput() throws IOException {
-        ApplicationController delegate = new ApplicationController();
+        ApplicationController handle = new ApplicationController();
         int number1;
         int number2;
         String operator;
@@ -36,7 +36,7 @@ public class MathCalculatorView {
             number2 = Integer.parseInt(in.nextLine());
 
             System.out.print("\n" + number1 + " " + operator + " " + number2 + " = ");
-            delegate.handleMathCommands(operator, number1, number2);
+            handle.handleMathCommands(operator, number1, number2);
             
         }catch (Exception e) {
             e.printStackTrace();
