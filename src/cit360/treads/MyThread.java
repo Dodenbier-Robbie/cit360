@@ -13,6 +13,7 @@ public class MyThread implements Runnable {
 	
     private String threadName;
     private int count;
+    AtomicCounter counter = new AtomicCounter();
 
     MyThread(String name, int newcount) {
         this.threadName = name;
@@ -27,6 +28,7 @@ public class MyThread implements Runnable {
         }
         System.out.println(threadName + " ran " + laps + " laps");
         try {
+                counter.nextValue();
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -9,6 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
  * @author rdodenbier
@@ -18,23 +19,25 @@ public class ExecutorServiceExample {
 
     private static Future playerTwo;
     private static Future playerThree;
+    
+    AtomicCounter counter = new AtomicCounter();
 
     public void ExecutorServiceExample() throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        Runnable threadOne = new MyThread("\nPlayer One", 2);
+        Runnable threadOne = new MyThread("\nRunner One", 5);
         executor.execute(threadOne);
         for(int i = 0; i < 10; i++) {
             if(playerTwo == null) {
-                playerTwo = executor.submit(new MyThread("Player Two", 10));
+                playerTwo = executor.submit(new MyThread("Runner Two", 10));
             }else {
-                playerTwo = executor.submit(new MyThread("Player Two", i*15));
+                playerTwo = executor.submit(new MyThread("Runner Two", i*15));
             }
 
             if(playerThree == null) {
-                playerThree = executor.submit(new MyThread("Player Three", 20));
+                playerThree = executor.submit(new MyThread("Runner Three", 20));
             }else {
-                playerThree = executor.submit(new MyThread("Player Three", i*20));
+                playerThree = executor.submit(new MyThread("Runner Three", i*20));
             }    
             
             if(playerTwo.get() == null) {
@@ -53,5 +56,6 @@ public class ExecutorServiceExample {
         executor.shutdown();
         executor.awaitTermination(1, TimeUnit.SECONDS);
         System.out.println("All tasks are finished!");
+        System.out.println("A total of " + counter.getValue() + " threads ran successfull!!!");
     }
 }
