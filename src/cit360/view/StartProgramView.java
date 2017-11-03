@@ -24,7 +24,7 @@ public class StartProgramView {
         + "\nURL and HTTP:\t\t\tBasic"
         + "\nJSON:\t\t\t\tBasic"
         + "\nJUnit:\t\t\t\tBasic"
-        + "\nThreading:\t\t\tNot yet started"
+        + "\nThreading:\t\t\tIn progress"
         + "\nACP:\t\t\t\tTurned in"
         + "\nMVC:\t\t\t\tBasic"
         + "\nServlet:\t\t\tTurned in"

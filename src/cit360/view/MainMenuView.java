@@ -8,11 +8,10 @@ package cit360.view;
 import cit360.control.CollectionsExample;
 import cit360.control.HttpConnectionExample;
 import cit360.control.JSONExample;
-import cit360.treads.MyThread;
 import cit360.control.PlayerController;
 import cit360.model.HibernateExample;
 import cit360.model.Player;
-import cit360.treads.ExecutorServiceTest;
+import cit360.treads.ExecutorServiceExample;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
@@ -158,8 +157,8 @@ class MainMenuView {
     }
 
     private void displayThreading() throws InterruptedException, ExecutionException {
-        ExecutorServiceTest execTest = new ExecutorServiceTest();
-        execTest.ExecutorServiceTest();
+        ExecutorServiceExample execTest = new ExecutorServiceExample();
+        execTest.ExecutorServiceExample();
     }
 
     private void displayAPC() throws IOException {
