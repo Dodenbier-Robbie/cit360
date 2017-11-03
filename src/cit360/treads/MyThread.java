@@ -22,13 +22,13 @@ public class MyThread implements Runnable {
 
     @Override
     public void run() {
-            int laps = 0;
+        int laps = 0;
         for (int i = 0; i <= this.count; i++) {
             laps =+ i;
         }
+        counter.nextValue();
         System.out.println(threadName + " ran " + laps + " laps");
         try {
-                counter.nextValue();
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();

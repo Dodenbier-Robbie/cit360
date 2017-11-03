@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author rdodenbier
  */
 public class AtomicCounter {
-    private final AtomicInteger counter = new AtomicInteger();
+    private static AtomicInteger counter = new AtomicInteger(0);
     
     public int nextValue() {
         return counter.incrementAndGet();
@@ -21,5 +21,9 @@ public class AtomicCounter {
     
     public int getValue() {
         return counter.get();
+    }
+    
+    public void setValue(int newValue) {
+        counter.set(newValue);
     }
 }
