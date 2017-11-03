@@ -22,8 +22,4 @@ public class AtomicCounter {
     public int getValue() {
         return counter.get();
     }
-    
-    public void setValue(int newValue) {
-        counter.set(newValue);
-    }
 }
