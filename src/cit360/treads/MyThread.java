@@ -13,12 +13,10 @@ public class MyThread implements Runnable {
 	
     private String threadName;
     private int count;
-    private final long timeSleep;
 
-    MyThread(String name, int newcount, long newtimeSleep) {
+    MyThread(String name, int newcount) {
         this.threadName = name;
         this.count = newcount;
-        this.timeSleep = newtimeSleep;
     }
 
     @Override
@@ -27,9 +25,9 @@ public class MyThread implements Runnable {
         for (int i = 0; i <= this.count; i++) {
             laps =+ i;
         }
-        System.out.println(threadName + " thread ran " + laps + " laps");
+        System.out.println(threadName + " ran " + laps + " laps");
         try {
-                Thread.sleep(this.timeSleep);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

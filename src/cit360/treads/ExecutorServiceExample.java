@@ -23,19 +23,19 @@ public class ExecutorServiceExample {
     public void ExecutorServiceExample() throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        Runnable threadOne = new MyThread("\nPlayerOne", 2, 100);
+        Runnable threadOne = new MyThread("\nPlayerOne", 2);
         executor.execute(threadOne);
         for(int i = 0; i < 2; i++) {
             if(playerTwo == null) {
-                playerTwo = executor.submit(new MyThread("PlayerTwo", 10, 200));
+                playerTwo = executor.submit(new MyThread("PlayerTwo", 10));
             }else {
-                playerTwo = executor.submit(new MyThread("PlayerTwo", 20, 200));
+                playerTwo = executor.submit(new MyThread("PlayerTwo", 20));
             }
 
             if(playerThree == null) {
-                playerThree = executor.submit(new MyThread("PlayerThree", 50, 100));
+                playerThree = executor.submit(new MyThread("PlayerThree", 50));
             }else {
-                playerThree = executor.submit(new MyThread("PlayerThree", 500, 100));
+                playerThree = executor.submit(new MyThread("PlayerThree", 500));
             }    
             
             if(playerTwo.get() == null) {
@@ -46,13 +46,13 @@ public class ExecutorServiceExample {
             }
             if(playerThree.get() == null) {
                 System.out.println(i + 1 + ") PlayerThree terminated successfully");
+                System.out.println("-------------------------------------------------------------");
             } else {
                 playerThree.cancel(true);
             }
         }
       
         executor.shutdown();
-        System.out.println("-------------------------------------------------------------");
         executor.awaitTermination(1, TimeUnit.SECONDS);
         System.out.println("All tasks are finished!");
     }
