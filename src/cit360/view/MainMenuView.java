@@ -11,8 +11,10 @@ import cit360.control.JSONExample;
 import cit360.control.PlayerController;
 import cit360.model.HibernateExample;
 import cit360.model.Player;
+import cit360.treads.ExecutorServiceExample;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
 
 /**
  *
@@ -154,12 +156,15 @@ class MainMenuView {
         System.out.println("Handled using the Test Suite");
     }
 
-    private void displayThreading() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void displayThreading() throws InterruptedException, ExecutionException {
+        ExecutorServiceExample execTest = new ExecutorServiceExample();
+        execTest.ExecutorServiceExample();
     }
 
-    private void displayAPC() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void displayAPC() throws IOException {
+        MathCalculatorView mathCalculator = new MathCalculatorView();
+        mathCalculator.doMathInput();
+        
     }
 
     private void displayMVC() throws Exception {
