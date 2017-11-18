@@ -6,6 +6,8 @@
 package model;
 
 import com.mysql.jdbc.Connection;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import model.Player;
@@ -34,11 +36,11 @@ public class HibernateExample {
       }
     }
 
-    public void addPlayer(String firstName, String lastName, int score) {
+    public void addPlayer(String firstName, String lastName, String email, String phone, Date createDate) {
         session = factory.openSession();
         try {
             tx = session.beginTransaction();
-            Player player = new Player(firstName, lastName, score);
+            Player player = new Player(firstName, lastName, email, phone, createDate);
             session.save(player);
             tx.commit();
         }catch (HibernateException e) {
@@ -50,18 +52,18 @@ public class HibernateExample {
         }
     }
     
-    public void getListPlayers() {
+    public ArrayList<Player> getListPlayers() {
         session = factory.openSession();
+        ArrayList<Player> playerList = new ArrayList<Player>();
         try {
             tx = session.beginTransaction();
             List players = session.createQuery("FROM Player").list();
             
             for(Iterator iterator = players.iterator(); iterator.hasNext();){
-                Player player = (Player) iterator.next(); 
-                System.out.print("ID: " + player.getPlayerId());
-                System.out.print("\tFirst Name: " + player.getPlayerFirstName()); 
-                System.out.print("\tLast Name: " + player.getPlayerLastName()); 
-                System.out.println("\tScore: " + player.getPlayerScore()); 
+                Player player = (Player) iterator.next();
+                playerList.add(new Player(player.getPlayerId(), player.getPlayerFirstName(),
+                    player.getPlayerLastName(), player.getPlayerEmail(), player.getPlayerPhone(),
+                    player.getCreateDate()));
          }
             tx.commit();
         }catch (HibernateException e) {
@@ -71,5 +73,6 @@ public class HibernateExample {
             session.flush();
             session.close();
         }
-    }
+        return playerList;
+    }    
 }

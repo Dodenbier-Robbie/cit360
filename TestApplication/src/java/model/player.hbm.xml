@@ -46,6 +46,8 @@ Contributor(s):
     </id>
     <property name="playerFirstName" column="first_name" type="string" />
     <property name="playerLastName" column="last_name" type="string" />
-    <property name="playerScore" column="score" type="int" />
+    <property name="playerEmail" column="email" type="string" />
+    <property name="playerPhone" column="phone" type="string" />
+    <property name="createDate" column="create_date" type="date" />
   </class>
 </hibernate-mapping>
