@@ -5,9 +5,6 @@
  */
 package cit360;
 
-import cit360.control.PlayerController;
-import cit360.model.Player;
-import cit360.view.PlayerView;
 import cit360.view.StartProgramView;
 
 /**

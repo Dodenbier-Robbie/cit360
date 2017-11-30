@@ -133,8 +133,9 @@ class MainMenuView {
         
         System.out.println("\n*** Player deleted from database ***");
         hibernate.deletePlayer(2);
-        hibernate.getListPlayers();    
-                
+        hibernate.getListPlayers();
+        
+        hibernate.closeConnection();
     }
 
     private void displayURL() throws Exception {

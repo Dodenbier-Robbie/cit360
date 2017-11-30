@@ -32,6 +32,10 @@ public class HibernateExample {
             System.err.println("Failed to create sessionFactory object." + ex);
       }
     }
+    
+    public static void closeConnection() {
+        factory.close();
+    }
 
     public void addPlayer(String firstName, String lastName, int score) {
         session = factory.openSession();
